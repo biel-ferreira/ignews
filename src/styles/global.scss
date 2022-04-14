@@ -5,32 +5,31 @@
 }
 
 :root {
-    --white: #FFFFFF;
+  --white: #ffffff;
 
-    --gray-100: #E1E1E6 ;
-    --gray-300: #a8a8b3 ;
-    --gray-900: #121214 ;
+  --gray-100: #e1e1e6;
+  --gray-300: #a8a8b3;
+  --gray-800: #29292e;
+  --gray-900: #121214;
 
-    --cyan-500: #61dafb;
-    --yellow-500: #eba417;
+  --cyan-500: #61dafb;
+  --yellow-500: #eba417;
 }
 
-@media(max-width:1080px){
-    html{
-        font-size: 93.75%;
-        
-    }
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
 }
-@media(max-width:720px){
-    html{
-        font-size: 87.5%;
-
-    }
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
 }
 
 body {
-    background: var(--gray-900);
-    color: var(--white);
+  background: var(--gray-900);
+  color: var(--white);
 }
 
 body,
