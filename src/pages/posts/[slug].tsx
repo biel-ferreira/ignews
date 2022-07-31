@@ -19,10 +19,6 @@ export interface IPostProps {
 }
 
 export default function Post({ post }: IPostProps) {
-  console.log("--- post no slug ---");
-
-  console.log(post);
-
   return (
     <>
       <Head>
@@ -50,9 +46,6 @@ export const getServerSideProps: GetServerSideProps = async ({
   const session = (await getSession({ req })) as ISession;
   const { slug } = params;
 
-  console.log("---- slug -----");
-  console.log(slug);
-
   if (!session?.activeSubscription) {
     return {
       redirect: {
@@ -63,13 +56,8 @@ export const getServerSideProps: GetServerSideProps = async ({
   }
 
   const prismic = getPrismicClient(req);
-  console.log("--------- SLUG ANTES DO RESPONSE ------");
 
-  console.log(slug);
   const response = await prismic.getByUID("publication", String(slug), {});
-
-  console.log("response ");
-  console.log(response);
 
   const post = {
     slug,
@@ -84,8 +72,6 @@ export const getServerSideProps: GetServerSideProps = async ({
       }
     ),
   };
-
-  console.log("-------- POST CRIADO ---------");
 
   return {
     props: {

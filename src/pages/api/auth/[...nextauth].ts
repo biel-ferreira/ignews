@@ -100,7 +100,7 @@ export default NextAuth({
             q.Get(q.Match(q.Index("user_by_email"), q.Casefold(user.email)))
           )
         );
-        console.log(user);
+
         return true;
       } catch (err) {
         console.log(err);
